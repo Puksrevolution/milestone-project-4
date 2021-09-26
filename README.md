@@ -9,7 +9,7 @@ This webpage is the last Milestone Project which is a part of the Full Stack Web
 Live Project
 ======
 
-[View the live project here](https://msp4-fancyshoes.herokuapp.com/)
+[View the live project here](https://msp4-fancy-shoes.herokuapp.com/)
 
 
 Screenshot
