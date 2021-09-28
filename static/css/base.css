@@ -1,0 +1,426 @@
+/* -------------------------------------BASE */
+html {
+    height: 100%;
+}
+
+body {    
+    font-family: 'Rubik', sans-serif;
+}
+
+/* -------------------------------------Special Styling */
+
+/* From CI Boutique Ado mini project */
+.logo-font {
+    text-transform: uppercase;
+}
+
+/* -------------------------------------HEADER SECTION */
+/* -------------------------------------Navbar */
+
+/*Utility Class*/
+.bg-blue {
+    background-color: #6DB1BF!important;
+}
+
+/*
+Default Bootstrap navbar-dark toggler is too dark,
+CSS added to lighten the hamburger icon and border
+*/
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dark .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* -------------------------------------TEMPLATE BODY STYLING */
+/* -------------------------------------Bootstrap Toast Messages*/
+
+/* from CI Boutique Ado mini project */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 5px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+/* From CI Boutique Ado mini project */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+/* From CI Boutique Ado mini project */
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Product RRP Price Strikethrough Text */
+span.strike-through-text {
+    text-decoration: line-through;
+}
+
+/* -------------------------------------Buttons */
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000
+}
+
+.btn-white:hover {
+    background-color: #ffc107;
+    color: #000
+}
+
+/* From CI Boutique Ado mini project */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999999;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* -------------------------------------Django Widget Buttons */
+
+/* From CI Boutique Ado mini project */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide the Browse button from view inside the larger span button */
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* -------------------------------------Allauth Buttons */
+/* From CI Boutique Ado mini project */
+
+/* Replicates a standard Bootstrap button class with some tweaks */
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Add button hover effect */
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+/* Bootstrap text links colour */
+.allauth-form-inner-content a {
+    color: #17a2b8;
+}
+
+/* -------------------------------------Form Elements Section */
+/* -------------------------------- Input Forms */
+
+/* Remove the form number input field default up & down arrows */
+/*https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Corrects the product qty input field size to the the +/- buttons */
+.form-row .form-group .input-group input {
+    max-width: 60px;
+    border: 1px solid;
+}
+
+/* 
+Adpated Bootstrap form-control class to fix Firefox input form size mismatch
+Now cross-browser compatible with Chrome & Edge
+*/
+.form-control {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Fixes the quantity input field height in the Shopping cart for cross-browser support */
+.form-control.form-control-sm {
+    height: 30.5px;
+}
+
+/* -------------------------------------Allauth Forms */
+
+/* replicate Bootstrap text-secondary class */
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+/* all inputs have a black border and no border radius to maintain site styling */
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+/* hide labels on forms as they already have placeholders except remember me check box */
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+/* style placeholder colour to match the rest of the site */
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+/* -------------------------------------Search Bar Section */
+
+/* Search bar placeholder text to match the other form fields */
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* -------------------------------------FOOTER SECTION */
+
+/* Sticky footer styling */
+body {
+    padding: 0px;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}
+
+/* -------------------------------------Social Media links */
+
+.social-media i {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media i:hover {
+    color: #ffc107;
+}
+
+/* -------------------------------------Media Queries */
+/* -------------------------------------Responsive Design - TABLET */
+
+/* From CI Boutique Ado mini project Slightly larger container on xl screens */
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media only screen and (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
+
+/* Reduce font size for Delivery Banner, adjust mobile navbar icons and toggler size
+on smaller displays */
+@media only screen and (max-width: 992px) {
+    #delivery-banner h4.logo-font {
+        font-size: 0.9rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    .btn.btn-outline-dark.rounded-0,
+    .btn.btn-outline-success.rounded-0,
+    .btn.btn-dark.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-dark.rounded-0.btn-lg,
+    .btn.btn-outline-success.rounded-0.btn-lg,
+    .btn.btn-dark.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: 1rem;
+    }
+
+    .increment-qty,
+    .decrement-qty {
+        padding: 0.25rem .5rem !important;
+    }
+
+    .form-group input.form-control-sm {
+        padding: .25rem .5rem;
+        font-size: .875rem;
+        line-height: 1.5;
+    }
+
+    .form-group input.form-control {
+        display: block;
+        padding: .375rem .75rem;
+        font-size: 1.05rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+}
+
+/* -------------------------------------Responsive Design - MOBILE */
+/* Jumbotron CTA text resize for smaller display sizes */
+@media only screen and (max-width: 775px) {
+    .jumbotron h1.display-4 {
+        font-size: 2.5rem;
+    }
+
+    .jumbotron p.lead {
+        font-size: 1rem;
+    }
+
+}
