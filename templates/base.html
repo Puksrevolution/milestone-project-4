@@ -69,11 +69,11 @@
 
 <body>
     <header class="container-fluid fixed top">
-        <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row bg-blue pt-lg-2 d-none d-lg-flex">
             <!-- Brand Logo Image -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="#" class="nav-link logo-img-link">
-                    <img src="{{ MEDIA_URL }}FancyShoeswhite.png" width="200"
+                    <img src="media/FancyShoes.png" width="200"
                         class="d-inline-block align-top mx-5" alt="Fancy Shoes" loading="lazy">
                 </a>
             </div>
@@ -151,8 +151,7 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/mobile-nav.html' %}
-                {% include 'includes/main-nav.html' %}
+                
             </nav>
         </div>
 
@@ -173,19 +172,7 @@
 
     {% if messages %}
     <div class="message-container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-        {% endwith %}
-        {% endfor %}
+        
     </div>
     {% endif %}
 
@@ -200,7 +187,7 @@
 
     <!-- Footer element is in a separate partial HTML file -->
     <footer>
-        {% include 'includes/footer.html' %}
+        
     </footer>
 
     {% block postloadjs %}

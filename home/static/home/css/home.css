@@ -1,0 +1,79 @@
+/* -------------------------------------TEMPLATE BODY STYLING */
+/*Utility Classes*/
+.text-shadow {
+    text-shadow: 0 0 0.1rem #343A40,
+                 0 0 0.1rem #343A40;
+}
+
+.text-shadow-2 {
+    text-shadow: 0 0 0.2rem #000,
+                 0 0 0.2rem #000,
+                 0 0 0.2rem #000,
+                 0 0 0.1rem #000,                 
+                 0 0 0.1rem #000;
+}
+
+/* -------------------------------------Jumbotron */
+div.jumbotron {
+    background: url('/media/home_shoes.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border-radius: calc(.4rem - 1px);
+}
+
+div.jumbotron p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    border-radius: 1.5rem;
+}
+
+/* -------------------------------------Card Deck */
+
+h2.card-title {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 4px #000;
+}
+
+a.btn-outline-dark {
+    color: #343a40;
+    border-color: #343a40;
+    background-color: #fff;
+}
+
+.card {    
+    border: none;    
+}
+
+.card__image-container {   
+    background-color: #6DB1BF;
+    border-radius: 0.4rem;    
+}
+
+
+.card__image {
+    width: 100%;    
+    filter: brightness(1.5);
+    mix-blend-mode: multiply;
+    border-radius: 0.4rem;
+}
+
+/* -------------------------------------Media Queries */
+/* -------------------------------------Responsive Design - MOBILE & TABLET */
+
+/* */
+@media only screen and (max-width: 880px) and (min-width: 575px) {
+    h2.card-title {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: 0 0 4px #000;
+    }
+}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white text-dark small">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block page_header %}
+<div class="container-fluid header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Hero Image & CTA -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h2 class="display-4 font-weight-bolder text-white text-shadow-2">
+                WELCOME TO <br> FANCY SHOES!
+            </h2>
+            <p class="lead text-white text-shadow-2">
+                Shop online 24/7 and check out our latest deals.
+            </p>
+            <a class="btn btn-outline-dark btn-lg text-uppercase py-3 px-3" href="#" role="button">
+                Shop Now
+            </a>
+        </div>
+    </div>    
+    
+    <!-- Shop By Category cards -->
+    <div class="card-deck mb-5">
+        <div class="card d-flex text-center text-white card__image-container">
+            <a href="#">
+                <img class="card__image card-img-top rounded-3"
+                    src="media/home_shoes-285331_640.jpg" alt="A Woman">
+                <div class="card-img-overlay align-items-center d-flex justify-content-center">
+                    <h2 class="card-title">Ladies</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card d-flex text-center text-white card__image-container">
+            <a href="#">
+                <img class="card__image card-img-top rounded-3"
+                    src="media/home_brown-shoes-1150071_640.jpg" alt="Men Shoes">
+                <div class="card-img-overlay align-items-center d-flex justify-content-center">
+                    <h2 class="card-title">Gents</h2>
+                </div>
+            </a>
+        </div>            
+    </div>
+</div>
+{% endblock %}
