@@ -1,0 +1,17 @@
+[{
+    "model": "products.gender",
+    "pk": 1,
+    "fields": {
+        "name": "men",
+        "display_name": "Men"
+    }
+},
+{
+    "model": "products.gender",
+    "pk": 2,
+    "fields": {
+        "name": "women",
+        "display_name": "Women"
+    }
+}
+]

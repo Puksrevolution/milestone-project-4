@@ -1,0 +1,26 @@
+[
+    {
+        "model": "products.subcategory",
+        "pk": 1,
+        "fields": {
+            "name": "casual",
+            "display_name": "Casual"
+        }
+    },
+    {
+        "model": "products.subcategory",
+        "pk": 2,
+        "fields": {
+            "name": "formal",
+            "display_name": "Formal"
+        }
+    },
+    {
+        "model": "products.subcategory",
+        "pk": 3,
+        "fields": {
+            "name": "sports",
+            "display_name": "Sports"
+        }
+    }
+]

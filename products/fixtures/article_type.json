@@ -1,0 +1,66 @@
+[
+    {
+        "model": "products.articletype",
+        "pk": 1,
+        "fields": {
+            "name": "casual_shoes",
+            "display_name": "Casual Shoes"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 2,
+        "fields": {
+            "name": "flip_flops",
+            "display_name": "Flip Flops"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 3,
+        "fields": {
+            "name": "sandals",
+            "display_name": "Sandals"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 4,
+        "fields": {
+            "name": "formal_shoes",
+            "display_name": "Formal Shoes"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 5,
+        "fields": {
+            "name": "sports_shoes",
+            "display_name": "Sports Shoes"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 6,
+        "fields": {
+            "name": "sports_sandals",
+            "display_name": "Sports Sandals"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 7,
+        "fields": {
+            "name": "flats",
+            "display_name": "Flats"
+        }
+    },
+    {
+        "model": "products.articletype",
+        "pk": 8,
+        "fields": {
+            "name": "heels",
+            "display_name": "Heels"
+        }
+    }
+]
