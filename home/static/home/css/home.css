@@ -31,8 +31,20 @@ div.jumbotron p {
     border-radius: 1.5rem;
 }
 
-/* -------------------------------------Card Deck */
+.btn-outline-blue {
+    color: #343a40;
+    border-color: #0d6efd;
+    background-color: #fff;
+}
 
+.btn-outline-blue:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: none;
+}
+
+
+/* -------------------------------------Card Deck */
 h2.card-title {
     text-decoration: none;
     color: #fff;
@@ -41,10 +53,17 @@ h2.card-title {
     text-shadow: 0 0 4px #000;
 }
 
-a.btn-outline-dark {
-    color: #343a40;
-    border-color: #343a40;
-    background-color: #fff;
+h2.card-title:hover {
+    color: #0d6efd;
+    text-shadow: 0 0 1px #000,
+                 0 0 1px #000,
+                 0 0 1px #000,
+                 0 0 2px #000,
+                 0 0 2px #000,
+                 0 0 2px #000,
+                 0 0 3px #fff,
+                 0 0 3px #fff,
+                 0 0 3px #fff;
 }
 
 .card {    
@@ -56,13 +75,13 @@ a.btn-outline-dark {
     border-radius: 0.4rem;    
 }
 
-
 .card__image {
     width: 100%;    
     filter: brightness(1.5);
     mix-blend-mode: multiply;
     border-radius: 0.4rem;
 }
+
 
 /* -------------------------------------Media Queries */
 /* -------------------------------------Responsive Design - MOBILE & TABLET */
