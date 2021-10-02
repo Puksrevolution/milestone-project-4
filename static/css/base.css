@@ -7,6 +7,10 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+hr {
+    border-top: 1px solid #0d6efd;
+}
+
 /* -------------------------------------Special Styling */
 
 /* From CI Boutique Ado mini project */
@@ -323,6 +327,10 @@ footer {
 
 a.text-blue:hover {
     color: #0d6efd!important;
+}
+
+hr.hr-footer {
+    border-top: 1px solid #fff;
 }
 
 /* -------------------------------------Social Media links */
