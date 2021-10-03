@@ -28,6 +28,8 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'product_description',
+        'gender',
+        'article_type',
         'colour',
         'price',
         'discount_price',
