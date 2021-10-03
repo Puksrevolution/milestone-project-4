@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white text-dark small">
+
+        <!-- Home Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <!-- All Products link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'products' %}">
+                Products
+            </a>
+        </li>
+
+        <!-- Gender filtering -->
+        <li class="breadcrumb-item">
+            <a
+                href="{% url 'products' %}?gender={{ product.gender.name }}">
+                {{ product.gender.display_name }}                
+            </a>
+        </li>
+
+        <!-- Product Category filtering -->
+        <li class="breadcrumb-item">
+            <a
+                href="{% url 'products' %}?gender={{ product.gender.name }}&sub_category={{ product.sub_category.name }}">                
+                {{ product.sub_category.display_name }}
+            </a>
+        </li>
+
+        <!-- Product Type filtering -->
+        <li class="breadcrumb-item">
+            <a
+                href="{% url 'products' %}?gender={{ product.gender.name }}&article_type={{ product.article_type.name }}">
+                {{ product.article_type.display_name }}
+            </a>
+        </li>
+
+        <!-- Product Display Name -->
+        <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mb-3">
+    <div class="row">
+
+        <!-- Product Image Container -->
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container">
+
+                <!-- Display the product image -->
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" width="600" height="450" src="{{ product.image.url }}"
+                        alt="{{ product.name }}">
+                </a>
+                {% else %}
+
+                <!-- Else display the default "No Image" placeholder file -->
+                <a href="">
+                    <img class="card-img-top img-fluid" width="600" height="450" src="{{ MEDIA_URL }}noimage.png"
+                        alt="{{ product.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product_page_container mb-5 mt-md-5">
+
+                <!-- Product Name -->
+                <h3 class="mb-0">
+                    {{ product.name }}
+                </h3>
+
+                <!-- Product RRP & Discount Prices -->
+                <p>
+                    <span class="lead mb-0 text-left text-danger font-weight-bold">
+                        £{{ product.discount_price }}
+                    </span>
+                    <span class="text-muted">
+                        RRP <span class="strike-through-text">£{{ product.price }}</span>
+                    </span>
+                </p>
+
+                <!-- Product Category -->
+                {% if product.sub_category %}
+                <p class="small mt-1 mb-0">
+                    <a href="{% url 'products' %}?sub_category={{ products.sub_category.name }}" class="text-muted">
+                        <i class="fas fa-tag mr-1"></i>{{ product.sub_category.display_name }}
+                    </a>
+                </p>
+                {% endif %}
+
+                <!-- Super User product edit & delete links -->
+                {% if request.user.is_superuser %}
+                <p class="mt-3 mb-0">
+                    <small>
+                        <a class="btn btn-outline-info mr-2 rounded-0" href="#">
+                            <i class="fas fa-edit fa-sm"></i>
+                            Edit
+                        </a>
+                        <a class="btn btn-outline-danger rounded-0" href="#">
+                            <i class="far fa-trash-alt fa-sm"></i>
+                            Delete
+                        </a>
+                    </small>
+                </p>
+                {% endif %}
+
+                <!-- Product Description -->
+                <p class="mt-3">
+                    {{ product.product_description }}
+                </p>
+
+                <!-- Product Colour -->
+                <p class="mt-3">
+                    <strong>Colour:</strong><br>
+                    {{ product.colour }}
+                </p>
+
+                <!-- Add to Shopping Cart qty selector & buttons -->
+                <form action="#" class="form" method="POST">
+                    {% csrf_token %}
+
+                    <!-- Item size & quantity selectors -->
+                    <div class="form-row">
+                        
+                        <!-- Shoe sizes -->                        
+                        <div class="col-12">
+                            <p class="mb-1"><strong>Size:</strong></p>
+                            <select name="product_size" id="id_product_size" class="form-control rounded-0 w-25">
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9" selected>9</option>
+                                <option value="9.5">9.5</option>
+                                <option value="10">10</option>
+                                <option value="10.5">10.5</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Quantity Selector -->
+                        <div class="col-12">
+                            <p class="mt-3 mb-1"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <!-- minus button -->
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-outline-dark rounded-0"
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}"
+                                            aria-label="decrease quantity">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <!-- Qty input field -->
+                                    <input class="form-control qty_input text-center" type="number" name="quantity"
+                                        value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                        id="id_qty_{{ product.id }}" aria-label="quantity input" required>
+                                    <!-- plus button -->
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-outline-dark rounded-0"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}"
+                                            aria-label="increase quantity">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Keep Shopping & Add to Cart Buttons -->
+                        <div class="col{% if s %}-12 mt-2{% endif %}">
+                            <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn btn-outline-success rounded-0 text-uppercase btn-lg mt-5"
+                                value="Add to Shopping Cart">
+                        </div>
+
+                        <!-- Redirects user back to product page after item added to shopping cart -->
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
