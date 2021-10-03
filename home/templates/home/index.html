@@ -35,7 +35,7 @@
             <p class="lead text-white text-shadow-2">
                 Shop online 24/7 and check out our latest deals.
             </p>
-            <a class="btn btn-outline-blue btn-lg text-uppercase py-3 px-3" href="#" role="button">
+            <a class="btn btn-outline-blue btn-lg text-uppercase py-3 px-3" href="{% url 'products' %}" role="button">
                 Shop Now
             </a>
         </div>
@@ -44,7 +44,7 @@
     <!-- Shop By Category cards -->
     <div class="card-deck mb-5">
         <div class="card d-flex text-center text-white card__image-container">
-            <a href="#">
+            <a href="{% url 'products' %}?gender=women">
                 <img class="card__image card-img-top rounded-3"
                     src="media/home_shoes-285331_640.jpg" alt="Women Shoes">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
@@ -53,7 +53,7 @@
             </a>
         </div>
         <div class="card d-flex text-center text-white card__image-container">
-            <a href="#">
+            <a href="{% url 'products' %}?gender=men">
                 <img class="card__image card-img-top rounded-3"
                     src="media/home_shoes_gents.jpg" alt="Men Shoes">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
