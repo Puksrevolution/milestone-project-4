@@ -1,0 +1,131 @@
+<!-- Code adapted from Code Institute Boutique Ado project -->
+
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+
+        <!-- Home nav link -->
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-dark mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+
+        <!-- All Products nav links -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-dark mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
+                    By Price
+                </a>                
+                <a href="{% url 'products' %}?sort=sub_category&direction=asc" class="dropdown-item ">
+                    By Product Category
+                </a>
+                <a href="{% url 'products' %}?sort=article_type&direction=asc" class="dropdown-item ">
+                    By Product Type
+                </a>
+                <a href="{% url 'products' %}" class="dropdown-item">
+                    All Products
+                </a>
+            </div>
+        </li>
+
+        <!-- Men Shoes nav links -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-dark mr-5" href="#" id="clothing-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Men
+            </a>
+            <div class="dropdown-menu border-0">
+                <!-- Casual -->
+                <a href="{% url 'products' %}?gender=men,category=footwear&sub_category=casual&sort=article_type&direction=asc"
+                    class="dropdown-item"><strong>Casual</strong></a>
+                <a href="{% url 'products' %}?gender=men,category=footwear,sub_catecory=casual&article_type=casual_shoes"
+                    class="dropdown-item">Casual Shoes</a>
+                <a href="{% url 'products' %}?gender=men,category=footwear,sub_catecory=casual&article_type=flip_flops"
+                    class="dropdown-item">Flip Flops</a>
+                <a href="{% url 'products' %}?gender=men,category=footwear,sub_catecory=casual&article_type=sandals"
+                    class="dropdown-item">Sandals</a>
+                <div class="dropdown-divider"></div>
+                <!-- Formal -->
+                <a href="{% url 'products' %}?gender=men,category=footwear&sub_category=formal&sort=article_type&direction=asc"
+                    class="dropdown-item"><strong>Formal</strong></a>
+                <a href="{% url 'products' %}?gender=men,category=footwear,sub_category=formal&article_type=formal_shoes"
+                    class="dropdown-item">Formal Shoes</a>
+                <div class="dropdown-divider"></div>
+                <!-- Sports -->
+                <a href="{% url 'products' %}?gender=men,category=footwear&sub_category=sports&sort=article_type&direction=asc"
+                    class="dropdown-item"><strong>Sports</strong></a>
+                <a href="{% url 'products' %}?gender=men,category=footwear,sub_category=sports&article_type=sports_shoes"
+                    class="dropdown-item">Sports Shoes</a>
+                <a href="{% url 'products' %}?gender=men,category=footwear,sub_category=sports&article_type=sports_sandals"
+                    class="dropdown-item">Sports Sandals</a>
+            </div>
+        </li>
+
+        <!-- Women nav links -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-dark mr-5" href="#" id="womenswear-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Women
+            </a>
+            <div class="dropdown-menu border-0">
+                <!-- Casual -->
+                <a href="{% url 'products' %}?gender=women,category=footwear&sub_category=casual&sort=article_type&direction=asc"
+                    class="dropdown-item"><strong>Casual</strong></a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=casual_shoes"
+                    class="dropdown-item">Casual Shoes</a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=flip_flops"
+                    class="dropdown-item">Flip Flops</a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=sandals"
+                    class="dropdown-item">Sandals</a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=flats"
+                    class="dropdown-item">Flats</a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=heels"
+                    class="dropdown-item">Heels</a>
+                <div class="dropdown-divider"></div>
+                <!-- Formal -->
+                <a href="{% url 'products' %}?gender=women,category=footwear&sub_category=formal&sort=article_type&direction=asc"
+                    class="dropdown-item"><strong>Formal</strong></a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=formal_shoes"
+                    class="dropdown-item">Formal Shoes</a>
+                <div class="dropdown-divider"></div>
+                <!-- Sports -->
+                <a href="{% url 'products' %}?gender=women,category=footwear&sub_category=sports&sort=article_type&direction=asc"
+                    class="dropdown-item"><strong>Sports</strong></a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=sports_shoes"
+                    class="dropdown-item">Sports Shoes</a>
+                <a href="{% url 'products' %}?gender=women,category=footwear,sub_catecory=casual&article_type=sports_sandals"
+                    class="dropdown-item">Sports Sandals</a>
+            </div>
+        </li>
+
+        <!-- Mega Offers nav links -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-warning text-shadow" href="#"
+                id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mega Offers
+            </a>
+            <div class="dropdown-menu border-0">
+                <a href="{% url 'products' %}?special_offer=new_arrivals&sort=article_type&direction=asc"
+                    class="dropdown-item">
+                    New Arrivals
+                </a>
+                <a href="{% url 'products' %}?special_offer=deals&sort=article_type&direction=asc"
+                    class="dropdown-item">
+                    Deals
+                </a>
+                <a href="{% url 'products' %}?special_offer=clearance&sort=article_type&direction=asc"
+                    class="dropdown-item">
+                    Clearance
+                </a>
+                <a href="{% url 'products' %}?special_offer=new_arrivals,deals,clearance&sort=article_type&direction=asc"
+                    class="dropdown-item">
+                    All Specials
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
