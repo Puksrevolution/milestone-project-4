@@ -1,10 +1,5 @@
 /* -------------------------------------TEMPLATE BODY STYLING */
 /*Utility Classes*/
-.text-shadow {
-    text-shadow: 0 0 0.1rem #343A40,
-                 0 0 0.1rem #343A40;
-}
-
 .text-shadow-2 {
     text-shadow: 0 0 0.2rem #000,
                  0 0 0.2rem #000,
