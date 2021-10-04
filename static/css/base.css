@@ -3,7 +3,8 @@ html {
     height: 100%;
 }
 
-body {    
+body {
+    color: #343a40;    
     font-family: 'Rubik', sans-serif;
 }
 
@@ -117,6 +118,18 @@ span.strike-through-text {
 }
 
 /* -------------------------------------Buttons */
+
+.btn-outline-blue {
+    color: #343a40;
+    border-color: #0d6efd;
+    background-color: #fff;
+}
+
+.btn-outline-blue:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: none;
+}
 
 /* from Bulma */
 .icon {
