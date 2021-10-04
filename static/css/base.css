@@ -27,6 +27,11 @@ hr {
     background-color: #6DB1BF!important;
 }
 
+.text-shadow {
+    text-shadow: 0 0 0.1rem #343A40,
+                 0 0 0.1rem #343A40;
+}
+
 /*
 Default Bootstrap navbar-dark toggler is too dark,
 CSS added to lighten the hamburger icon and border
