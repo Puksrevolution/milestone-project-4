@@ -1,3 +1,7 @@
 .cart-price-input {
     width: 12%;
 }
+
+.table td, .table th {
+    border-top: 0.01rem solid #6DB1BF;
+}
