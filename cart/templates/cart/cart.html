@@ -2,7 +2,7 @@
 
 {% extends "base.html" %}
 {% load static %}
-
+{% load cart_tools %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
@@ -65,7 +65,7 @@
                         </p>
                         <p class="mt-0 mb-3">
                             <strong>Subtotal:</strong>
-                            £#
+                            £{{ item.product.discount_price | calculate_subtotal:item.quantity }}
                         </p>
                     </div>
                     <div class="col-7 col-sm-6">
@@ -115,7 +115,7 @@
                             </td>
                             <td class="py-3 w-25 text-right">
                                 <p class="my-0">
-                                    £#
+                                    £{{ item.product.discount_price | calculate_subtotal:item.quantity }}
                                 </p>
                             </td>
                         </tr>
@@ -150,7 +150,7 @@
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
-                <span class="text-uppercase">Keep Shopping</span>
+                <span class="text-uppercase"><i class="fas fa-shopping-bag fa-sm"></i> Keep Shopping</span>
             </a>
             {% endif %}
         </div>
@@ -159,7 +159,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+{{ block.super }}
 
 <!-- Back To Top Button functionality -->
 <script>
