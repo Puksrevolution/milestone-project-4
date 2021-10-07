@@ -197,7 +197,7 @@
                         <!-- Keep Shopping & Add to Cart Buttons -->
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-blue btn-lg mt-5">
-                                Keep Shopping
+                                <i class="fas fa-shopping-bag fa-sm"></i> Keep Shopping
                             </a>
                             <input type="submit" class="btn btn-outline-success text-uppercase btn-lg mt-5"
                                 value="Add to Shopping Cart">
@@ -214,5 +214,6 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
