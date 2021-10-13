@@ -71,7 +71,7 @@
                 </div>
             </div>
             {% endfor %}
-            <hr class="my-0">
+            <hr class="mt-2 mb-3">
 
             <!-- Order Totals -->
             <div class="row text-black text-right">
@@ -96,13 +96,13 @@
             <!-- Checkout Customer & delivery Information form -->
             <form action="{% url 'checkout' %}" id="payment-form" method="POST">
                 {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3 mb-4">
                     <legend class="fieldset-label small text-dark px-2 w-auto">Details</legend>
                     {{ order_form.first_name | as_crispy_field}}
                     {{ order_form.last_name | as_crispy_field}}
                     {{ order_form.email | as_crispy_field}}
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3 mb-4">
                     <legend class="fieldset-label small text-dark px-2 w-auto">Delivery Information</legend>
                     {{ order_form.telephone | as_crispy_field}}
                     {{ order_form.address_line1 | as_crispy_field}}
@@ -113,11 +113,12 @@
                     {{ order_form.country | as_crispy_field}}
 
                     <!-- Allow authenticated users to save delivery info to profile -->
-                    <div class="form-check form-check-inline-float-right mr-0">
+                    <div class="form-check form-check-inline-float-right mr-0 pl-0">
                         {% if user.is_authenticated %}
-                        <label for="id-save-info" class="form-check-label">Save this delivery information to my
-                            profile</label>
-                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
+                        <label for="id-save-info" class="form-check-labe">
+                            Save this delivery information to my profile
+                        </label>
+                        <input class="form-check-input ml-1 ml-sm-2" type="checkbox" id="id-save-info" name="save-info"
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
@@ -129,7 +130,7 @@
                 </fieldset>
 
                 <!-- Stripe Card Payment -->
-                <fieldset class="rounded px-3 mb-5">
+                <fieldset class="rounded px-3 mb-4">
                     <legend class="fieldset-label small text-dark px-2 w-auto">Payment Information</legend>
                     <!-- Stripe card element -->
                     <div class="mb-3" id="card-element"></div>
@@ -142,7 +143,7 @@
                 </fieldset>
 
                 <!-- Checkout Form Buttons -->
-                <div class="submit-button text-right mt-5 mb-2">
+                <div class="submit-button text-right mt-4 mb-2">
 
                     <!-- Adjust Cart Button -->
                     <a href="{% url 'view_cart' %}" class="btn btn-outline-dark rounded-0">
