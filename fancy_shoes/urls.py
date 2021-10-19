@@ -1,5 +1,7 @@
-"""fancy_shoes URL Configuration
+"""
+fancy_shoes URL Configuration
 
+code adapted from the Code Institute Boutique Ado mini project
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -25,4 +27,5 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
