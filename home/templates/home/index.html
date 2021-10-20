@@ -46,7 +46,7 @@
         <div class="card d-flex text-center text-white card__image-container">
             <a href="{% url 'products' %}?gender=women">
                 <img class="card__image card-img-top rounded-3"
-                    src="media/home_shoes-285331_640.jpg" alt="Women Shoes">
+                    src="{{ MEDIA_URL }}home_shoes-285331_640.jpg" alt="Women Shoes">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
                     <h2 class="card-title">Ladies</h2>
                 </div>
@@ -55,7 +55,7 @@
         <div class="card d-flex text-center text-white card__image-container">
             <a href="{% url 'products' %}?gender=men">
                 <img class="card__image card-img-top rounded-3"
-                    src="media/home_shoes_gents.jpg" alt="Men Shoes">
+                    src="{{ MEDIA_URL }}home_shoes_gents.jpg" alt="Men Shoes">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
                     <h2 class="card-title">Gents</h2>
                 </div>
