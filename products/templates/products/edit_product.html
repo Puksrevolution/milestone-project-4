@@ -1,0 +1,86 @@
+<!-- Code adapted from CI Boutique Ado mini project -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white text-dark small">
+
+        <!-- Home Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <!-- All Products link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'products' %}">
+                Products
+            </a>
+        </li>
+
+        <!-- Product Management -->
+        <li class="breadcrumb-item" aria-current="page">
+            Product Management
+        </li>
+
+        <!-- Product Management -->
+        <li class="breadcrumb-item active" aria-current="page">
+            Edit a Product
+        </li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h2 class="logo-font my-4">Product Management</h2>
+            <h5 class="text-muted">Edit a Product</h5>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Edit product form -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                {% if field.name != 'image' %}
+                {{ field | as_crispy_field }}
+                {% else %}
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn btn-outline-danger btn-lg" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-outline-success btn-lg" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $('#new-image').change(function () {
+        var file = $('#new-image')[0].files[0];
+        $('#filename').text(`Image will be set to: ${file.name}`);
+    });
+</script>
+{% endblock %}
