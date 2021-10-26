@@ -13,8 +13,8 @@ let stripe = Stripe(stripePublicKey);
 let elements = stripe.elements();
 let style = {
     base: {
-        color: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        color: '#343a40',
+        fontFamily: '"Rubik", sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
