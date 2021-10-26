@@ -1,4 +1,8 @@
-# Code adapted from CI Boutique Ado mini projects
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
+
+import json
 
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
@@ -7,16 +11,16 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+import stripe
 
 from products.models import Product
+
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
 
-import stripe
-import json
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 
 @require_POST
@@ -65,7 +69,8 @@ def checkout(request):
 
         """
         For each item in the cart, create an order line item
-        checking whether the product has a size or not.
+        checking whether the product has a size or not, in case the owner
+        wants to add in the future products without sizes.
         On the rare occassion that the product doesn't exist in the database
         delete the order and return the user to the shopping cart page
         """
@@ -144,8 +149,6 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'first_name': profile.user.get_full_name().split(' ')[0],
-                    'last_name': profile.user.get_full_name().split(' ')[1],
                     'email': profile.user.email,
                     'telephone': profile.default_telephone,
                     'address_line1': profile.default_address_line1,
