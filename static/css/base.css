@@ -1,3 +1,4 @@
+/* CSS adapted from CI Boutique Ado mini project */
 /* -------------------------------------BASE */
 html {
     height: 100%;
@@ -12,25 +13,35 @@ hr {
     border-top: 1px solid #0d6efd;
 }
 
-/* -------------------------------------Special Styling */
+/* -------------------------------------Utility Class*/
 
-/* From CI Boutique Ado mini project */
-.logo-font {
-    text-transform: uppercase;
-}
-
-/* -------------------------------------HEADER SECTION */
-/* -------------------------------------Navbar */
-
-/*Utility Class*/
-.bg-blue {
-    background-color: #6DB1BF!important;
+/* font,text */
+.fs-9 {
+    font-size: 0.9rem;
 }
 
 .text-shadow {
     text-shadow: 0 0 0.1rem #343A40,
                  0 0 0.1rem #343A40;
 }
+
+/* From CI Boutique Ado mini project */
+.logo-font {
+    text-transform: uppercase;
+}
+
+/* background */
+.bg-blue {
+    background-color: #6DB1BF!important;
+}
+
+/* Form */
+.border {
+    border: 1px solid #0d6efd!important;
+}
+
+/* -------------------------------------HEADER SECTION */
+/* -------------------------------------Navbar */
 
 /*
 Default Bootstrap navbar-dark toggler is too dark,
@@ -45,7 +56,6 @@ CSS added to lighten the hamburger icon and border
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* -------------------------------------TEMPLATE BODY STYLING */
 /* -------------------------------------Bootstrap Toast Messages*/
 
 /* from CI Boutique Ado mini project */
@@ -77,6 +87,7 @@ CSS added to lighten the hamburger icon and border
 }
 
 /* Convenience classes - colors copied from Bootstrap */
+
 /* From CI Boutique Ado mini project */
 .arrow-primary {
     border-bottom-color: #007bff !important;
@@ -237,7 +248,7 @@ Now cross-browser compatible with Chrome & Edge
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: #343a40;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -260,9 +271,9 @@ Now cross-browser compatible with Chrome & Edge
     /* text-secondary */
 }
 
-/* all inputs have a black border and no border radius to maintain site styling */
+/* all inputs have a blue border and no border radius to maintain site styling */
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #0d6efd;
     border-radius: 0;
 }
 
@@ -273,6 +284,7 @@ Now cross-browser compatible with Chrome & Edge
 
 #signup_form p input {
     width: 40%;
+    border: 1px solid #0d6efd!important;
 }
 
 /* hide labels on forms as they already have placeholders except remember me check box */
