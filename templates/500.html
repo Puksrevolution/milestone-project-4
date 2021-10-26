@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Background Image -->
+<div class="error__bg--color"><div class="error__bg--image"></div></div>
+
+<!-- Content container -->
+<div class="container error__container">
+    <div class="row mb-2">
+        <div class="col-12">                    
+            <h2 class="logo-font mt-5 mb-4 text-center error__header">
+                Oops!
+            </h2>                    
+            <p class="text-center error__text">
+                <strong>
+                    Something went wrong.<br>
+                    Try to refresh this page or feel free to contact us if the problem persists.
+                   
+                </strong>
+            </p>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col text-center">
+            <a href="{% url 'products' %}" class="btn btn-error btn-lg my-2">                
+                <span class="text-uppercase">
+                    <strong>Back to Products</strong>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
