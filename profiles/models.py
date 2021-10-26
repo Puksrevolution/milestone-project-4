@@ -1,4 +1,6 @@
-# Code adapted from CI Boutique Ado mini project
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 from django.db import models
 from django.contrib.auth.models import User

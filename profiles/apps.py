@@ -1,3 +1,7 @@
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
+
 from django.apps import AppConfig
 
 
