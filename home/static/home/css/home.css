@@ -69,17 +69,12 @@ h2.card-title:hover {
     border-radius: 0.4rem;
 }
 
-
 /* -------------------------------------Media Queries */
 /* -------------------------------------Responsive Design - MOBILE & TABLET */
 
 /* */
 @media only screen and (max-width: 880px) and (min-width: 575px) {
     h2.card-title {
-        text-decoration: none;
-        color: #fff;
-        font-size: 2rem;
-        font-weight: 700;
-        text-shadow: 0 0 4px #000;
+        font-size: 2rem;        
     }
 }

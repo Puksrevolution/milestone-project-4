@@ -39,8 +39,8 @@
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: #343a40;
+    border: 1px solid #0d6efd;
 }
 
 select,
@@ -61,7 +61,7 @@ select option[value=""] {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(23, 162, 184, .85);
+    background: rgb(13, 110, 253, 0.80);
     z-index: 9999;
 }
 
@@ -75,12 +75,7 @@ select option[value=""] {
 
 /* -------------------------------- Checkout Success Buttons */
 
-.btn-mega-deals {
-    border: 1px solid #000;
-}
-
 .btn-mega-deals:hover {
     color: #FFC107;
     background: #000;
-    border: 1px solid #000;
 }
