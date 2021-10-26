@@ -189,10 +189,12 @@ The colour schemes is created by using [Coolors](https://coolors.co/).
 
 ![Coolors.co Palette](Documentation/images/coolors_palette.png)
 
-- *Text* (#343A40) - Gunmetal
-- *bg-warning* (#FFC107) - Mikado Yellow
-- *bg-success* (#28A745) - Green Pantone
+- *text* (#343A40) - Gunmetal
 - *bg-blue* (#6DB1BF) - Maximum Blue
+- *hover effects and buttons* (#6DB1BF) - Blue Crayola
+- *bg-success and buttons* (#28A745) - Green Pantone
+- *bg-warning and buttons* (#FFC107) - Mikado Yellow
+- *text and buttons* (#DC3545) - Rusty Red
 
 ### **Wireframes** ###
 
