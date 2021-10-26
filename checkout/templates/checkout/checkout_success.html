@@ -8,11 +8,23 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+{% block extra_title %}Thank You For Your Order{% endblock %}
+
 {% block breadcrumbs %}
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb bg-white text-dark small">
-        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Checkout Complete</li>
+    <ol class="breadcrumb bg-white small pl-0 pl-sm-3">
+
+        <!-- Home Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <!-- Checkout -->
+        <li class="breadcrumb-item active" aria-current="page">
+            Checkout Complete
+        </li>
     </ol>
 </nav>
 {% endblock %}
@@ -27,9 +39,10 @@
 
 {% block content %}
 <div class="container mb-4">
+    <!-- Page Title -->
     <div class="row">
         <div class="col">
-            <h2 class="logo-font my-4">Thank You For Your Order</h2>
+            <h2 class="logo-font">Thank You For Your Order</h2>
             <hr>
             <p class="text-dark">
                 Your order information is below. A confirmation will be sent to <strong>{{ order.email }}</strong>
@@ -40,7 +53,7 @@
     <!-- Order Summary -->
     <div class="row">
         <div class="col-12 col-lg-7">
-            <div class="order-confirmation-wrapper p-2 border">
+            <div class="order-confirmation-wrapper p-2 border rounded">
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">
@@ -57,7 +70,7 @@
                         </p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
-                        <p class="mb-0">
+                        <p class="mb-0 fs-9">
                             {{ order.order_number }}
                         </p>
                     </div>
@@ -122,7 +135,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-dark font-weight-bold">
@@ -135,7 +147,6 @@
                         </p>
                     </div>
                 </div>
-
                 <!-- Delivery Address -->
                 <div class="row">
                     <div class="col-12 col-md-4">
@@ -240,7 +251,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-dark font-weight-bold">
@@ -253,7 +263,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-dark font-weight-bold">
@@ -274,7 +283,7 @@
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
             {% if from_profile %}
-            <a href="{% url 'profile' %}" class="btn btn-outline-dark btn-lg my-2">
+            <a href="{% url 'profile' %}" class="btn btn-outline-blue btn-lg mt-5 mb-3">
                 <span class="icon mr-2">
                     <i class="fas fa-angle-left"></i>
                 </span>
@@ -283,7 +292,7 @@
                 </span>
             </a>
             {% else %}
-            <a href="{% url 'products' %}" class="btn btn-warning btn-mega-deals rounded-0 my-2">
+            <a href="{% url 'products' %}" class="btn btn-warning btn-mega-deals btn-lg mt-5 mb-3">
                 <span class="icon mr-2">
                     <i class="fas fa-gifts"></i>
                 </span>

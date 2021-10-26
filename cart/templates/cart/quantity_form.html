@@ -1,3 +1,5 @@
+<!-- Template adapted from Code Institute Boutique Ado mini project -->
+
 <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
@@ -10,7 +12,7 @@
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input text-center" type="number" name="quantity"
+            <input class="form-control form-control-sm qty_input text-center border" type="number" name="quantity"
                 value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
                 id="id_qty_{{ item.item_id }}" aria-label="quantity input" required>
             <div class="input-gtoup-append">

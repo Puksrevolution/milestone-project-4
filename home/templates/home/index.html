@@ -5,11 +5,15 @@
 <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
+{% block extra_title %}Your online shop for shoes!{% endblock %}
 
 {% block breadcrumbs %}
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb bg-white text-dark small">
-        <li class="breadcrumb-item active" aria-current="page">Home</li>
+    <ol class="breadcrumb bg-white text-dark small pl-0 pl-sm-3">
+        <!-- Home -->
+        <li class="breadcrumb-item active" aria-current="page">
+            Home
+        </li>
     </ol>
 </nav>
 {% endblock %}
@@ -17,9 +21,7 @@
 {% block page_header %}
 <div class="container-fluid header-container">
     <div class="row">
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
     </div>
 </div>
 {% endblock %}
@@ -35,7 +37,8 @@
             <p class="lead text-white text-shadow-2">
                 Shop online 24/7 and check out our latest deals.
             </p>
-            <a class="btn btn-outline-blue btn-lg text-uppercase py-3 px-3" href="{% url 'products' %}" role="button">
+            <a class="btn btn-outline-blue btn-lg text-uppercase py-3 px-3" 
+              href="{% url 'products' %}" role="button">
                 Shop Now
             </a>
         </div>
@@ -46,7 +49,7 @@
         <div class="card d-flex text-center text-white card__image-container">
             <a href="{% url 'products' %}?gender=women">
                 <img class="card__image card-img-top rounded-3"
-                    src="{{ MEDIA_URL }}home_shoes-285331_640.jpg" alt="Women Shoes">
+                    src="{{ MEDIA_URL }}home_shoes_ladies-285331_640.jpg" alt="Women Shoes">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
                     <h2 class="card-title">Ladies</h2>
                 </div>

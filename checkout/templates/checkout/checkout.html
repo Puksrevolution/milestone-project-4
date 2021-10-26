@@ -8,12 +8,30 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+{% block extra_title %}Checkout{% endblock %}
+
 {% block breadcrumbs %}
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb bg-white text-dark small">
-        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{% url 'view_cart' %}">Shopping Cart</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+    <ol class="breadcrumb bg-white small pl-0 pl-sm-3">
+
+        <!-- Home Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <!-- Shopping Cart Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'view_cart' %}">
+                Shopping Cart
+            </a>
+        </li>
+
+        <!-- Checkout -->
+        <li class="breadcrumb-item active" aria-current="page">
+            Checkout
+        </li>
     </ol>
 </nav>
 {% endblock %}
@@ -28,9 +46,10 @@
 
 {% block content %}
 <div class="container mb-4">
+    <!-- Page Title -->
     <div class="row">
         <div class="col">            
-            <h2 class="logo-font my-4">Checkout</h2>
+            <h2 class="logo-font">Checkout</h2>
             <hr>
         </div>
     </div>
@@ -146,7 +165,7 @@
                 <div class="submit-button text-right mt-4 mb-2">
 
                     <!-- Adjust Cart Button -->
-                    <a href="{% url 'view_cart' %}" class="btn btn-outline-dark btn-lg">
+                    <a href="{% url 'view_cart' %}" class="btn btn-outline-blue btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
