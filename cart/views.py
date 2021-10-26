@@ -1,5 +1,6 @@
-# Code adapted from the CI Boutique Ado mini project
-
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404)

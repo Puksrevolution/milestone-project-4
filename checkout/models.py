@@ -1,4 +1,6 @@
-# Code adapted from Code Institute Boutique Ado mini project
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 import uuid
 from django.db import models

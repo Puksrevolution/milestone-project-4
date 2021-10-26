@@ -1,6 +1,7 @@
 """
 Code adapted from the CI Boutique Ado mini project
 """
+
 from django import template
 
 

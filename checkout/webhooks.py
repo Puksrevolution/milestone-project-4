@@ -1,4 +1,6 @@
-# Code adapted from the CI Boutique Ado mini project
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 from django.conf import settings
 from django.http import HttpResponse

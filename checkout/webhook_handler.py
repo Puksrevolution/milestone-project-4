@@ -1,4 +1,6 @@
-# Code adapted from CI Boutique Ado mini project
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 import json
 import time
