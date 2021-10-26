@@ -1,4 +1,6 @@
-# Code adapted from CI Boutique Ado mini project
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 from django import forms
 from .widgets import CustomClearableFileInput
@@ -51,4 +53,4 @@ class ProductForm(forms.ModelForm):
         self.fields['sub_category'].choices = sub_category_display_name
         self.fields['special_offer'].choices = special_offer_display_name
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-dark rounded-0'
+            field.widget.attrs['class'] = 'border rounded-0'

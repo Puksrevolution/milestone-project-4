@@ -1,4 +1,6 @@
-# Code adapted from the CI Boutique Ado mini project
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
 
 from django.forms.widgets import ClearableFileInput
 from django.utils.translation import gettext_lazy as _

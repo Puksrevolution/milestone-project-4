@@ -1,3 +1,7 @@
+"""
+Code adapted from the CI Boutique Ado mini project
+"""
+
 from django.contrib import admin
 from .models import (
     Product, Gender, ArticleType, Category, SubCategory, SpecialOffer
