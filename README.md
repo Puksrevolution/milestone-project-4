@@ -20,7 +20,7 @@ All screenshots created using [Am I responsive](http://ami.responsivedesign.is/)
 <img src="Documentation/screenshots/screenshot_fancy-shoes.jpg">
 
 ---
-### **Contents** ###
+### **Table of Contents** ###
 
 - [Project](#project)
   - [Project Description](#project-description)
@@ -76,8 +76,8 @@ All screenshots created using [Am I responsive](http://ami.responsivedesign.is/)
 - [Credits](#credits)
   - [Images](#images)  
   - [Acknowledgements](#acknowledgements)
-
 ---
+
 
 Project
 ======
@@ -120,6 +120,7 @@ The site functionality will allow a common shopping experience for the visitor b
 [Back to Table of contents](#table-of-contents)
 
 ---
+
 
 UX DESIGN
 ===
@@ -174,10 +175,10 @@ As a **store owner**,
 22. I want to be able to edit / update the current product details and replace the product image file.
 23. I want to be able to delete a product that is no longer for sale.
 
-
-[Back to contents](#contents)
+[Back to Table of contents](#table-of-contents)
 
 ---
+
 
 Design
 ===
@@ -212,7 +213,6 @@ I designed the site mock-ups using [Balsamiq wireframes](https://balsamiq.com/).
 - [Checkout](Documentation/wireframes/checkout.png)
 - [Checkout Success](Documentation/wireframes/checkout-success.png)
 
-
 ### **Responsive Front-end Design** ###
 
 - Responsive mobile first design using a Bootstrap v4.6 framework
@@ -229,20 +229,12 @@ I designed the site mock-ups using [Balsamiq wireframes](https://balsamiq.com/).
 #### Topology ####
 
 - User Logged Out
-
-
 ![Topology - User logged out](Documentation/topology/topology_user_logged_out.png)
 
-
 - User Logged In
-
-
 ![Topology - User logged out](Documentation/topology/topology_user_logged_in.png)
 
-
 - Admin / Super User Logged In
-
-
 ![Topology - User logged out](Documentation/topology/topology_admin.png)
 
 ### **Database Schema** ###
@@ -257,9 +249,10 @@ The images needed to be curated down and were manually sorted through to a manag
 
 The .csv file were converted into a JSON file and the products needed some manually customizing and addition information like price, discount_price, sku, size and special_offer.
 
-[Back to contents](#contents)
+[Back to Table of contents](#table-of-contents)
 
 ---
+
 
 Technologies
 ===
@@ -274,7 +267,6 @@ Technologies
   - Used to create the interactive functionality of the website
 - [Python3](https://www.python.org/)
   - Used to create the main application functionality
-
 
 ### **Database** ###
 
@@ -307,8 +299,6 @@ Technologies
   - Used for the initialisation of the Bootstrap components functionality and enhance the shopping bag functionality.
 - [Django Template Language](https://docs.djangoproject.com/en/3.2/ref/templates/language/)
   - Templating language for Python.
-
-
 
 ### **Tools** ###
 
@@ -344,6 +334,7 @@ Technologies
 [Back to contents](#contents)
 
 ---
+
 
 Features
 ===
@@ -397,7 +388,6 @@ Features
 | Profile | | User's Orders | | |
 | Profile | | | Update Delivery Details | |
 
-
 ### **Messages** ###
 
 - [Bootstrap Toasts](https://getbootstrap.com/docs/4.3/components/toasts/) are used with customised templates to show:
@@ -412,7 +402,6 @@ Features
   - At its simplest level, certain pages are removed from view unless a user is authenticated by being logged in or not.
   - Where appropriate, Python views functions are also modified by Django `@login_required` decorators to restrict user access to inappropriate pages.
   - Editing of products is restricted to super-users or admins using if...else conditions to check user authentication.
-
 
 ### **Additional Site Features** ###
 
@@ -434,28 +423,28 @@ Features
 
 - More product categories like cleaning and care products or accessories for shoes
 
-
-[Back to contents](#contents)
+[Back to Table of contents](#table-of-contents)
 
 ---
+
 
 Testing
 ===
 
-- Testing information can be found in a separate [TESTING.md](TESTING.md) file.
+- Testing information can be found in a separate [TESTING.md](Documentation/TESTING.md) file.
 
-
-[Back to contents](#contents)
+[Back to Table of contents](#table-of-contents)
 
 ---
 Bugs
 ===
 
-Bug description
+- Bug informations can be found in a separate [TESTING.md](Documentation/TESTING.md) file.
 
-[Back to contents](#contents)
+[Back to Table of contents](#table-of-contents)
 
 ---
+
 
 Deployment
 ===
@@ -488,12 +477,9 @@ Copy the following code and input it into your terminal to clone milestone-proje
 git clone https://github.com/Puksrevolution/milestone-project-4.git
 ```
 
-
 #### **Creation of a Python Virtual Environment** ####
 
-
 *Note: The process may be different depending upon your own OS - please follow this [Python help guide](https://python.readthedocs.io/en/latest/library/venv.html) to understand how to create a virtual environment.*
-
 
 #### **Install the App dependencies and external libraries** ####
 
@@ -502,7 +488,6 @@ git clone https://github.com/Puksrevolution/milestone-project-4.git
 ```Python
 pip3 install -r requirements.txt
 ```
-
 
 #### **Create the database in sqlite3** ####
 
@@ -558,7 +543,6 @@ STRIPE_WH_SECRET=[YOUR STRIPE WEBHOOK SECRET KEY]
 - The Stripe keys can be found in the Developers section under API Keys and Webhooks of your [Stripe Account](https://stripe.com/gb)
 - ***Important:*** Add the `.env` file to your `.gitignore` file before pushing your files to any public git repository.
 
-
 #### **Run the application locally** ####
 
 - To run the application, enter the following command into the terminal window:
@@ -579,13 +563,11 @@ python3 manage.py runserver
 - Choose a geographical region closest to where you live.
   - Options available on a free account are ***United States*** or ***Europe***
 
-
 #### **Adding a PostgreSQL database to Heroku** ####
 
 - Select the **Resources** tab on your Heroku app dashboard
 - Select `Heroku Postgres` as a new add-on with a Plan name of `Hobby Dev - Free`
 - Heroku will build the PostgresQL database instance and add a config variable automatically.
-
 
 #### **Load the data into PostgreSQL** ####
 
@@ -639,10 +621,10 @@ python3 manage.py loaddata products
 
 ***Note: The static files served from GitHub will be much slower to load than running locally. It is recommended to copy the static files to an online service such as an AWS S3 Bucket and connect this to Heroku.***
 
-
-[Back to contents](#contents)
+[Back to Table of contents](#table-of-contents)
 
 ---
+
 
 Credits
 ===
@@ -663,7 +645,11 @@ Credits
 - **Favicon**
    - The Favicon image were source as free to use from pixabay.com under their [license agreement](https://unsplash.com/license)
   - [Shoe Prints](https://pixabay.com/de/vectors/fu%c3%9fabdr%c3%bccke-m%c3%a4nner-druckt-schuhe-151189/) - Photo by [OpenClipart-Vectors](https://pixabay.com/de/users/openclipart-vectors-30363/) on [Pixabay](https://pixabay.com/)
-  
+
+[Back to Table of contents](#table-of-contents)
+
+---
+
 
 Acknowledgements
 ===
@@ -671,3 +657,6 @@ Acknowledgements
 - [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma/) Course material - in particular the Boutique Ado Django mini project
 - [Simon Vardy](https://github.com/simonjvardy) for code snippets and README.md content.
 - [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) Documentation and code snippets used to build most of the templates
+
+
+[Back to Table of contents](#table-of-contents)
