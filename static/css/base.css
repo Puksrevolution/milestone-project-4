@@ -144,7 +144,7 @@ span.strike-through-text {
 .btn-outline-blue:hover {
     color: #fff;
     background-color: #0d6efd;
-    border-color: none;
+    border-color: #0d6efd;
 }
 
 /* from Bulma */
