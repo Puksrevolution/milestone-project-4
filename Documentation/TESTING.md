@@ -150,6 +150,11 @@ Bugs
 ===
 
 ![W3c CSS Results Image](../Documentation/testing/w3c_base_css_value_error.png)
+- Easy fix: Change value: none to value: transparent
+
+- Didn't manage the prefill function to work for first and last name
+
+- Issiu with sending email solved with an easy change of the DEVELOPMENT value: True to the value: False
 
 
 [Back to Table of contents](#table-of-contents)
