@@ -346,7 +346,7 @@ Features
 | 1 | The Products page shows a full list of products with a product image, name, price and sub-category labels. The products are displayed in a grid format with 4 columns on larger displays and reducing down to 1 column on mobile displays. |
 | 2, 4 & 13 | The navbar allows users to filter the products by gender, sub-category and article type as well as special offers categories. The navbar menus are arranged to provide quick access to defined sorting criteria to assist the user to quickly find the types of products they want. |
 | 3 | Each product image in the Products page can be clicked to open the item product page selected. The product page includes all the same information as the Products page, but includes a quantity selector and a size selector, as well as allowing the user to return to the main products page or add the item to the shopping cart. |
-| 5 & 17 | The user can click the shopping cart icon in the top right corner of the navbar to be taken to the cart page where each shopping cart item is listed with a product image, product details, unit price, quantity selector and a sub-total column. A toast message pop-up window appears each time the user adds an item to the shopping basket as a secondary way to easily keep track of the items to be purchased. Delivery cost and grand total amounts are also displayed on the shopping cart page. |
+| 5 & 17 | The user can click the shopping cart icon in the top right corner of the navbar to be taken to the cart page where each shopping cart item is listed with a product image, product details, unit price, quantity selector and a sub-total column. A toast message pop-up window appears each time the user adds an item to the shopping cart as a secondary way to easily keep track of the items to be purchased. Delivery cost and grand total amounts are also displayed on the shopping cart page. |
 | 6 | The breadcrumbs navigation links are shown just below the delivery banner in the upper left corner of the main page block. They show the current page and provide navigation links back to the Home page or other related pages. |
 | 7 & 9 | Users can click the My Account link in the navbar and select Register from the dropdown menu. The user is directed to the Sign-Up page where they must enter their email address, username and a password. An email is sent to the user to verify the account email address before registration is complete.  |
 | 8 | Users can click the My Account link in the navbar and select Log In from the dropdown menu. The user is directed to the Log In page where they must enter their username and a password. Once logged in, users can click the My Account link in the navbar and select Logout from the dropdown menu.  |
@@ -491,7 +491,7 @@ pip3 install -r requirements.txt
 
 #### **Create the database in sqlite3** ####
 
-The installaton of the requirements.txt file will initialise the sqlite3 development database locally.
+The installation of the requirements.txt file will initialise the sqlite3 development database locally.
 
 Run the following commands to create the database tables:
 
