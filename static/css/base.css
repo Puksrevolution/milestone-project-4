@@ -273,8 +273,7 @@ Now cross-browser compatible with Chrome & Edge
 
 /* all inputs have a blue border and no border radius to maintain site styling */
 .allauth-form-inner-content input {
-    border-color: #0d6efd;
-    border-radius: 0;
+    border-color: #0d6efd;    
 }
 
 #signup_form p label {
