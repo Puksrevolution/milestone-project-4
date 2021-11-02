@@ -1,3 +1,7 @@
+"""
+Code adapted from https://github.com/auxfuse/Milestone4
+"""
+
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
