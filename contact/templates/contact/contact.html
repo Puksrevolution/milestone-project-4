@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block extra_title %}Contact Us{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white text-dark small pl-0 pl-sm-3">
+
+        <!-- Home Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <!-- Shopping Cart -->
+        <li class="breadcrumb-item active" aria-current="page">
+            Contact Us
+        </li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block page_header %}
+<div class="container-fluid header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Title -->
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font">Contact Us</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col">
+            <p class="mt-2 fw-bolder">
+                Have you something to ask us?<br>
+                Use the below form to ask us anything.<br>
+                Please ensure to fill out the form in its entirety and use a valid Email Address.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="">
+                <div class="card-header bg-blue">
+                    <h4><i class="fas fa-paper-plane"></i> Contact</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Form fields are without labels to be consistent with modern app design UX themes. -->
+                    <form action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form }}
+                        </div>
+                        <input class="btn btn-outline-blue btn-lg mb-3" type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
