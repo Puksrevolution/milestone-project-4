@@ -25,6 +25,11 @@ hr {
                  0 0 0.1rem #343A40;
 }
 
+/* Icons */
+.star {
+    color: #FFC107;
+}
+
 /* From CI Boutique Ado mini project */
 .logo-font {
     text-transform: uppercase;
@@ -38,6 +43,11 @@ hr {
 /* Form */
 .border {
     border: 1px solid #0d6efd!important;
+}
+
+.border-br {
+    border: 1px solid #6DB1BF;
+    border-radius: 0.25rem;
 }
 
 /* -------------------------------------HEADER SECTION */
