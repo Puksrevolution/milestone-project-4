@@ -9,7 +9,9 @@ from django.utils import timezone
 
 # Models
 class Contact(models.Model):
-    """Model to define the fields required to create Contact Form"""
+    """
+    Model to define the fields required to create Contact Form
+    """
     query_title = models.CharField(max_length=150)
     query_text = models.TextField()
     query_email = models.EmailField()

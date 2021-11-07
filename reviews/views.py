@@ -1,3 +1,7 @@
+"""
+Code adapted from https://github.com/BrianWhelanDublin/milestone-project-4
+"""
+
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from .forms import ReviewForm

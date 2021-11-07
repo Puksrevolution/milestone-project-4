@@ -1,3 +1,7 @@
+"""
+Code adapted from https://github.com/BrianWhelanDublin/milestone-project-4
+"""
+
 from django.contrib import admin
 from .models import Review
 

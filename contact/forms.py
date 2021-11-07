@@ -23,7 +23,7 @@ class ContactQuery(forms.ModelForm):
         required=True,
         label='',
         widget=forms.TextInput(attrs={
-            'class': 'form-group, form-control',
+            'class': 'form-control',
             'placeholder': 'Title'
         })
     )
