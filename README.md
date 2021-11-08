@@ -137,43 +137,46 @@ As a **shopper**,<br>
 4. I want to be able to see any product special offers, new arrivals and available deals, taking advantage of any reduced prices shown.
 5. I want to be able to see items I have placed in my shopping cart easily so that I can keep track of what I am buying
 6. I want to be able to see breadcrumb navigation links to see where I am on the site easily.
+7. I want to be able to contact the company.
 
 #### **Registration and User Accounts** ####
 
 As a **shopper**,<br>
 
-7. I want to be able to register for an account to make future purchases easier.
-8. I want to be able to easily log in and out of my account so that I can access my personal account information.
-9. I want to be able to receive and email requireing me to verify my email account to finish account registeration.
-10. I want to be able to log in and have a personal profile page containing my delivery details and order history.
-11. I want to be able to save and update my delivery information on my personal profile page.
+8. I want to be able to register for an account to make future purchases easier.
+9. I want to be able to easily log in and out of my account so that I can access my personal account information.
+10. I want to be able to receive and email requireing me to verify my email account to finish account registeration.
+11. I want to be able to log in and have a personal profile page containing my delivery details and order history.
+12. I want to be able to save and update my delivery information on my personal profile page.
+13. I want to be able to leave a review of the company and the recived product.
+
 
 #### **Sorting and Searching** ####
 
 As a **shopper**,<br>
 
-12. I want to be able to sort the available products by name, price, sub-category or product type.
-13. I want to be able to filter and group products for men and women.
-14. I want to be able to see how many products are available based on the sorting / filtering I have applied.
-15. I want to be able to search for a product by name, type or sub-category.
+14. I want to be able to sort the available products by name, price, sub-category or product type.
+15. I want to be able to filter and group products for men and women.
+16. I want to be able to see how many products are available based on the sorting / filtering I have applied.
+17. I want to be able to search for a product by name, type or sub-category.
 
 #### **Purchasing and Checkout** ####
 
 As a **shopper**,<br>
 
-16. I want to be able to easily select the size and quantity of a product when adding it to the shopping cart.
-17. I want to be able to view the items in my shopping cart waiting to be purchased, seeing the sub-total, delivery costs and grand total amounts.
-18. I want to be able to easily update the items in the shopping cart by changing the quantities of products or remove them from the cart.
-19. I want to be able to checkout securely where I can enter my delivery and credit card payment details with confidence.
-20. I want to be able to view an order confirmation page as well as receive and email order confirmation once the transaction has succeeded.
+18. I want to be able to easily select the size and quantity of a product when adding it to the shopping cart.
+19. I want to be able to view the items in my shopping cart waiting to be purchased, seeing the sub-total, delivery costs and grand total amounts.
+20. I want to be able to easily update the items in the shopping cart by changing the quantities of products or remove them from the cart.
+21. I want to be able to checkout securely where I can enter my delivery and credit card payment details with confidence.
+22. I want to be able to view an order confirmation page as well as receive and email order confirmation once the transaction has succeeded.
 
 #### **Admin and Store Management** ###
 
 As a **store owner**,
 
-21. I want to be able to add new products to my store.
-22. I want to be able to edit / update the current product details and replace the product image file.
-23. I want to be able to delete a product that is no longer for sale.
+23. I want to be able to add new products to my store.
+24. I want to be able to edit / update the current product details and replace the product image file.
+25. I want to be able to delete a product that is no longer for sale.
 
 [Back to Table of contents](#table-of-contents)
 
@@ -344,22 +347,24 @@ Features
 | User Story ID | Features Implemented |
 | --- | --- |
 | 1 | The Products page shows a full list of products with a product image, name, price and sub-category labels. The products are displayed in a grid format with 4 columns on larger displays and reducing down to 1 column on mobile displays. |
-| 2, 4 & 13 | The navbar allows users to filter the products by gender, sub-category and article type as well as special offers categories. The navbar menus are arranged to provide quick access to defined sorting criteria to assist the user to quickly find the types of products they want. |
+| 2, 4 & 15 | The navbar allows users to filter the products by gender, sub-category and article type as well as special offers categories. The navbar menus are arranged to provide quick access to defined sorting criteria to assist the user to quickly find the types of products they want. |
 | 3 | Each product image in the Products page can be clicked to open the item product page selected. The product page includes all the same information as the Products page, but includes a quantity selector and a size selector, as well as allowing the user to return to the main products page or add the item to the shopping cart. |
-| 5 & 17 | The user can click the shopping cart icon in the top right corner of the navbar to be taken to the cart page where each shopping cart item is listed with a product image, product details, unit price, quantity selector and a sub-total column. A toast message pop-up window appears each time the user adds an item to the shopping cart as a secondary way to easily keep track of the items to be purchased. Delivery cost and grand total amounts are also displayed on the shopping cart page. |
+| 5 & 19 | The user can click the shopping cart icon in the top right corner of the navbar to be taken to the cart page where each shopping cart item is listed with a product image, product details, unit price, quantity selector and a sub-total column. A toast message pop-up window appears each time the user adds an item to the shopping cart as a secondary way to easily keep track of the items to be purchased. Delivery cost and grand total amounts are also displayed on the shopping cart page. |
 | 6 | The breadcrumbs navigation links are shown just below the delivery banner in the upper left corner of the main page block. They show the current page and provide navigation links back to the Home page or other related pages. |
-| 7 & 9 | Users can click the My Account link in the navbar and select Register from the dropdown menu. The user is directed to the Sign-Up page where they must enter their email address, username and a password. An email is sent to the user to verify the account email address before registration is complete.  |
-| 8 | Users can click the My Account link in the navbar and select Log In from the dropdown menu. The user is directed to the Log In page where they must enter their username and a password. Once logged in, users can click the My Account link in the navbar and select Logout from the dropdown menu.  |
-| 10 & 11 | Users who are logged in can click the My Account link in the navbar and select My Profile from the dropdown menu. The user is directed to the My Profile page where they can see their saved delivery details and order history records. Users can update and save their details from the My Profile page.|
-| 12 | A sorting selector is available on the Products page with a number of sorting options to list the products in both ascending and descending order. |
-| 14 | The products page displays the total number of products returned by the search query. |
-| 15 | The navbar has a search box visible on larger displays or can be revealed when tapping the search icon on mobile displays. The user can search for a product by name, type or sub-category. |
-| 16 | Users can select the size and the quantity from the individual product page when adding the item to the shopping cart. |
-| 18 | Items in the shopping cart can have their individual quantities updated between 1 and 99 or remove the item if no longer needed. |
-| 19 | Secure checkout and payment is provided by the integrated Stripe online credit card payment system. |
-| 20 | Once an order is completed, the user is shown an order confirmation page detailing the order information, order details, delivery address and billing information. |
-| 21 | Logged in store owners (admin / super users) have access to a Product Management page where new products can be added. |
-| 22 & 23 | Logged in store owners (admin / super users) have access to edit and delete buttons for all products on the site. The edit button opens and edit product page where the store owner can update the product details. |
+| 7 | Users can click the Contact Us here link in the footer section. The user is directed to the Contact Us page where they must enter a title, a message and their email address. A toast success or error message pop-up window appears, when the user submited the filled out form. |
+| 8 & 10 | Users can click the My Account link in the navbar and select Register from the dropdown menu. The user is directed to the Sign-Up page where they must enter their email address, username and a password. An email is sent to the user to verify the account email address before registration is complete. |
+| 9 | Users can click the My Account link in the navbar and select Log In from the dropdown menu. The user is directed to the Log In page where they must enter their username and a password. Once logged in, users can click the My Account link in the navbar and select Logout from the dropdown menu.|
+| 11 & 12 | Users who are logged in can click the My Account link in the navbar and select My Profile from the dropdown menu. The user is directed to the My Profile page where they can see their saved delivery details and order history records. Users can update and save their details from the My Profile page.|
+| 13 |  Users can click the See all Reviews button on the home page. The user is directed to the Customer Reviews page. At the top is a Add or Edit Review form section for registerd users. Below is a section that displays all the customer reviews. |
+| 14 | A sorting selector is available on the Products page with a number of sorting options to list the products in both ascending and descending order. |
+| 16 | The products page displays the total number of products returned by the search query. |
+| 17 | The navbar has a search box visible on larger displays or can be revealed when tapping the search icon on mobile displays. The user can search for a product by name, type or sub-category. |
+| 18 | Users can select the size and the quantity from the individual product page when adding the item to the shopping cart. |
+| 20 | Items in the shopping cart can have their individual quantities updated between 1 and 99 or remove the item if no longer needed. |
+| 21 | Secure checkout and payment is provided by the integrated Stripe online credit card payment system. |
+| 22 | Once an order is completed, the user is shown an order confirmation page detailing the order information, order details, delivery address and billing information. |
+| 23 | Logged in store owners (admin / super users) have access to a Product Management page where new products can be added. |
+| 24 & 25 | Logged in store owners (admin / super users) have access to edit and delete buttons for all products on the site. The edit button opens and edit product page where the store owner can update the product details. |
 
 ### **CRUD Functionality** ###
 
@@ -656,6 +661,8 @@ Acknowledgements
 
 - [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma/) Course material - in particular the Boutique Ado Django mini project
 - [Simon Vardy](https://github.com/simonjvardy) for code snippets and README.md content.
+- [Brian Whelan Dublin](https://github.com/BrianWhelanDublin) for code snippets.
+- [auxfuse](https://github.com/auxfuse) for code snippets.
 - [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) Documentation and code snippets used to build most of the templates
 
 
