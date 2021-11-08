@@ -21,7 +21,7 @@ def our_reviews(request):
             review.stars = int(request.POST.get('stars'))
             review.save()
 
-    reviews = Review.objects.all().order_by('-id')
+    reviews = Review.objects.all()
 
     form = ReviewForm()
     template = 'reviews/our_reviews.html'
@@ -60,7 +60,7 @@ def edit_review(request, review_id):
     else:
         form = ReviewForm(instance=review)
 
-    reviews = Review.objects.all().order_by('-id')
+    reviews = Review.objects.all()
 
     template = 'reviews/our_reviews.html'
     context = {
@@ -80,17 +80,9 @@ def delete_review(request, review_id):
     """
 
     review = get_object_or_404(Review, pk=review_id)
-    if review.reviewer != request.user:
-        messages.error(request,
-                       'You do not have permission to do this.')
-        return redirect(reverse('our_reviews'))
-
-    if request.method == 'POST':
+    if request.user == review.reviewer:
         review.delete()
-        messages.success(request,
-                         'Review has been deleted')
-        return redirect(reverse('our_reviews'))
-    else:
-        messages.error(request,
-                       'You do not have permission to do this.')
-        return redirect(reverse('our_reviews'))
+        messages.success(request, 'Review has been deleted')
+        return redirect('our_reviews')
+    messages.error(request, 'You are not the owner of this review.')
+    return redirect('our_reviews')
