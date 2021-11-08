@@ -26,6 +26,7 @@ def our_reviews(request):
     form = ReviewForm()
     template = 'reviews/our_reviews.html'
     context = {
+        'reviews': reviews,
         'form': form,
     }
 
