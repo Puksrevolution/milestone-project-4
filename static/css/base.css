@@ -370,8 +370,7 @@ hr.hr-footer {
 }
 
 .error__bg--image {
-    height: 100vh;    
-    background-image: url(media/travel-3272473_1280.jpg);
+    width: 100vw;    
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: cover, cover;
