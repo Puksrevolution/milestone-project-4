@@ -20,6 +20,8 @@ def our_reviews(request):
             review.reviewer = request.user
             review.stars = int(request.POST.get('stars'))
             review.save()
+            messages.success(request,
+                             'New Review has been added.')
 
     reviews = Review.objects.all()
 

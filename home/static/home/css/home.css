@@ -72,7 +72,6 @@ h2.card-title:hover {
 /* -------------------------------------Media Queries */
 /* -------------------------------------Responsive Design - MOBILE & TABLET */
 
-/* */
 @media only screen and (max-width: 880px) and (min-width: 575px) {
     h2.card-title {
         font-size: 2rem;        
