@@ -232,13 +232,13 @@ I designed the site mock-ups using [Balsamiq wireframes](https://balsamiq.com/).
 #### Topology ####
 
 - User Logged Out
-![Topology - User logged out](Documentation/topology/topology_user_logged_out.png)
+ ![Topology - User logged out](Documentation/topology/topology_user_logged_out.png)
 
 - User Logged In
-![Topology - User logged out](Documentation/topology/topology_user_logged_in.png)
+ ![Topology - User logged out](Documentation/topology/topology_user_logged_in.png)
 
 - Admin / Super User Logged In
-![Topology - User logged out](Documentation/topology/topology_admin.png)
+ ![Topology - User logged out](Documentation/topology/topology_admin.png)
 
 ### **Database Schema** ###
 
@@ -392,6 +392,11 @@ Features
 | Profile | | User Details | | |
 | Profile | | User's Orders | | |
 | Profile | | | Update Delivery Details | |
+| Reviews | Add New Review (Session) | | | |
+| Reviews | | All Review | | |
+| Reviews | | | Update Reviews (Session) | |
+| Reviews | | | | Remove Reviews (Session) |
+| Contact | Add/Submit Message | | | |
 
 ### **Messages** ###
 

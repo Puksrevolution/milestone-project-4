@@ -156,5 +156,13 @@ Bugs
 
 - Issiu with sending email solved with an easy change of the DEVELOPMENT value: True to the value: False
 
+- Delet Review function didn't worked correctly, neede to be rewritten.
+
+- Migrations to Heroku didn't uploaded, issiu contacts and reviews not existed in Heroku/Django-Admin Dashboard, needed to be done manually in terminal
+```
+heroku run python3 manage.py migrate -a msp4-fancy-shoes
+```
+
+- Reviews didn't diplayed on webpage, missing Reviews in reviews/views.py
 
 [Back to Table of contents](#table-of-contents)
