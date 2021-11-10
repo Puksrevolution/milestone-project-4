@@ -16,22 +16,13 @@ def contact(request):
     admin, otherwise user is public and query_from is left blank.
     """
     if request.method == 'POST':
-        if request.user.is_authenticated:
-            create_contact_form = Contact(
-                query_title=request.POST.get('query_title'),
-                query_text=request.POST.get('query_text'),
-                query_email=request.POST.get('query_email'),
-                query_from=request.user
-            )
-            create_contact_form.save()
-        else:
-            create_contact_form = Contact(
-                query_title=request.POST.get('query_title'),
-                query_text=request.POST.get('query_text'),
-                query_email=request.POST.get('query_email')
-            )
-            create_contact_form.save()
-
+        create_contact_form = Contact(
+            query_title=request.POST.get('query_title'),
+            query_text=request.POST.get('query_text'),
+            query_email=request.POST.get('query_email'),
+            query_from=request.user if request.user.is_authenticated else None
+        )
+        create_contact_form.save()
         messages.success(request, 'Mail sent. We will be in touch.')
 
     context = {
