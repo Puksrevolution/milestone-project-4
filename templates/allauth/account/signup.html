@@ -6,15 +6,34 @@
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-white text-dark small pl-0 pl-sm-3">
+
+        <!-- Home Link -->
+        <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+
+        <!-- Sign In -->
+        <li class="breadcrumb-item active" aria-current="page">
+            Sign In
+        </li>
+    </ol>
+</nav>
+{% endblock %}
+
 {% block content %}
-<div class="container mb-4">
+<div class="container">
   <div class="row">
       <div class="col">            
-          <h2 class="logo-font mt-4">{% trans "Sign Up" %}</h2>
+          <h2 class="logo-font">{% trans "Sign Up" %}</h2>
           <hr>
       </div>
   </div>
-  <div class="row">
+  <div class="row mb-5">
       <div class="col">
         <p>
           {% blocktrans %}

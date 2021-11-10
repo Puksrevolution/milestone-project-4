@@ -10,12 +10,6 @@
 {% endblock %}
 
 {% block content %}
-<!-- Background Image -->
-<div class="error__bg--color">
-    <img class="error__bg--image"
-      src="{{ MEDIA_URL }}travel-3272473_1280.jpg" width="100%">
-</div>
-
 <!-- Content container -->
 <div class="container error__container">
     <div class="row mb-2">
@@ -33,7 +27,7 @@
     </div>
     <div class="row mb-5">
         <div class="col text-center">
-            <a href="{% url 'products' %}" class="btn btn-error btn-lg my-2">                
+            <a href="{% url 'products' %}" class="btn btn-outline-blue btn-lg my-2">                
                 <span class="text-uppercase">
                     <strong>Back to Products</strong>
                 </span>

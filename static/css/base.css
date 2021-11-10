@@ -359,32 +359,12 @@ hr.hr-footer {
 
 /* -------------------------------------Error Pages */
 
-.error__bg--color {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: hsl(190, 39%, 50%);
-	z-index: -1;
-}
-
-.error__bg--image {
-    width: 100vw;    
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center, center center;
-    background-size: cover, cover;
-    background-attachment: fixed;        
-    mix-blend-mode: multiply;
-    filter: brightness(0.9);	
-}
-
 .error__container{
     max-width: 55rem;
 }
 
 .error__header {
-    color: #fff;
+    color: #FFC107;
     font-size: 7rem;
     text-shadow: 0 0 1px #000,
                  0 0 1px #000,
@@ -395,7 +375,7 @@ hr.hr-footer {
 }
 
 .error__text {
-    color: #fff;
+    color: #FFC107;
     font-size: 1.6rem;
     text-shadow: 0 0 1px #000,
                  0 0 1px #000,
@@ -403,23 +383,6 @@ hr.hr-footer {
                  0 0 2px #000,
                  0 0 2px #000,
                  0 0 2px #000;
-}
-
-.btn-error {
-    color: #fff;
-    background-color: hsl(190, 39%, 30%);
-    border-color: hsl(190, 39%, 30%);
-    text-shadow: 0 0 1px #000,
-                 0 0 1px #000,
-                 0 0 1px #000,
-                 0 0 2px #000,
-                 0 0 2px #000;
-}
-
-.btn-error:hover {
-    color: #fff;
-    border-color: hsl(190, 39%, 20%);
-    background-color: hsl(190, 39%, 20%);
 }
 
 /* -------------------------------------Media Queries */

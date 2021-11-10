@@ -1,7 +1,7 @@
 <!-- Code adapted from Code Institute Boutique Ado mini project -->
 
 <!-- Mobile Nav Searchbar -->
-<ul class="list-inline">
+<ul class="list-inline my-3">
     <li class="list-inline-item">
         <a class="text-white nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -30,7 +30,7 @@
 </ul>
 
 <!-- Mobile Nav My Account menu options-->
-<ul class="list-inline">
+<ul class="list-inline my-3">
     <li class="list-inline-item dropdown">
         <a class="text-white nav-link d-block d-lg-none" href="#" id="user-options-mobile" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -55,9 +55,9 @@
 </ul>
 
 <!-- Mobile Nav Shopping Cart -->
-<ul class="list-inline">
+<ul class="list-inline my-3">
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-success font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none"
+        <a class="{% if grand_total %}text-warning text-shadow font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none"
             href="{% url 'view_cart' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-cart fa-lg"></i></div>

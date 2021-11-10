@@ -172,8 +172,8 @@
 {{ block.super }}
 
 <script>
-    // Disable +/- buttons outside 1-99 range
-    function handleEnableDisable(itemId) {
+    // Disable +/- buttons outside 1-5 range
+    function handleEnableDisable() {
         let currentValue = parseInt($(`#stars`).val());
         let minusDisabled = currentValue < 2;
         let plusDisabled = currentValue > 4;
@@ -187,7 +187,7 @@
         let closestInput = $(this).closest('.input-group').find('.review_input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
-        handleEnableDisable(itemId);
+        handleEnableDisable();
     });
 
     // Decrement quantity
@@ -196,7 +196,7 @@
         let closestInput = $(this).closest('.input-group').find('.review_input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);
-        handleEnableDisable(itemId);
+        handleEnableDisable();
     });
 </script>
 {% endblock %}
