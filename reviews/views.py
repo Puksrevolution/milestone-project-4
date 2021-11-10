@@ -4,6 +4,7 @@ Code adapted from https://github.com/BrianWhelanDublin/milestone-project-4
 
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import ReviewForm
 from .models import Review
 
@@ -37,6 +38,7 @@ def our_reviews(request):
                   context)
 
 
+@login_required
 def edit_review(request, review_id):
     """
     View to edit a users review
@@ -76,6 +78,7 @@ def edit_review(request, review_id):
                   context)
 
 
+@login_required
 def delete_review(request, review_id):
     """
     View to delete a review
